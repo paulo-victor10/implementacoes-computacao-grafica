@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interpolação de Cores #B (chroma.js)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+</head>
+<body>
+  <h2>Implementação 3 — Interpolação de Cores #B</h2>
+
+  <div class="controls">
+    <label>A: <input type="color" id="colorA" value="#ff0000"></label>
+    <label>B: <input type="color" id="colorB" value="#ffff00"></label>
+    <label>C: <input type="color" id="colorC" value="#0000ff"></label>
+    <label>D: <input type="color" id="colorD" value="#00ff00"></label>
+    <br><br>
+    <label>Modo:
+      <select id="mode">
+        <option value="rgb">RGB</option>
+        <option value="hsl">HSL</option>
+      </select>
+    </label>
+    <label>Grade: <input type="number" id="n" min="2" max="60" value="8"></label>
+    <button id="generate">Gerar</button>
+  </div>
+
+  <div id="gridContainer" class="grid-container" style="width:400px; height:400px;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
