@@ -1,5 +1,15 @@
 # Implementações de Computação Gráfica para a N1
 
+## Implementação 1 - OpenGL com GLUT
+
+Este projeto apresenta experimentos visuais desenvolvidos em OpenGL com o auxílio da biblioteca GLUT, explorando conceitos fundamentais de computação gráfica, como gradientes de cor, formas geométricas básicas e transformações visuais.
+
+🛠️ **Tecnologias utilizadas**
+
+- OpenGL (Core e Fixed Pipeline)
+- GLUT (Gerenciamento de janelas e eventos)
+- C/C++
+
 ## Implementação 5 - Quadtree with Canvas 2D
 
 Este projeto implementa uma **Quadtree interativa** utilizando **HTML5 Canvas 2D** e **JavaScript puro**.
