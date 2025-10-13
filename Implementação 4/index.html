@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quadtree com Canvas 2D</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      border: 1px solid black;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Implementação 5 - Quadtree com Canvas 2D</h2>
+  <canvas id="quadtreeCanvas" width="400" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById("quadtreeCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Estrutura básica de um nó da quadtree
+    class Quad {
+      constructor(x, y, size) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.subdivided = false;
+        this.children = [];
+      }
+
+      draw(ctx) {
+        ctx.strokeRect(this.x, this.y, this.size, this.size);
+        if (this.subdivided) {
+          for (const child of this.children) {
+            child.draw(ctx);
+          }
+        }
+      }
+
+      subdivide() {
+        if (this.subdivided) return;
+
+        const half = this.size / 2;
+        this.children = [
+          new Quad(this.x, this.y, half), // superior esquerdo
+          new Quad(this.x + half, this.y, half), // superior direito
+          new Quad(this.x, this.y + half, half), // inferior esquerdo
+          new Quad(this.x + half, this.y + half, half), // inferior direito
+        ];
+        this.subdivided = true;
+      }
+
+      // Detecta se um ponto (x, y) está dentro deste quadrante
+      contains(px, py) {
+        return (
+          px >= this.x &&
+          px <= this.x + this.size &&
+          py >= this.y &&
+          py <= this.y + this.size
+        );
+      }
+
+      // Procura qual quadrante foi clicado e subdivide-o
+      click(px, py) {
+        if (!this.contains(px, py)) return false;
+
+        if (!this.subdivided) {
+          this.subdivide();
+        } else {
+          for (const child of this.children) {
+            if (child.click(px, py)) return true;
+          }
+        }
+        return true;
+      }
+    }
+
+    const root = new Quad(50, 50, 300);
+
+    function drawAll() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      root.draw(ctx);
+    }
+
+    drawAll();
+
+    canvas.addEventListener("click", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      root.click(x, y);
+      drawAll();
+    });
+  </script>
+</body>
+</html>
