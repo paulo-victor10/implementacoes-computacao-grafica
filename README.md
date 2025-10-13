@@ -1,5 +1,24 @@
 # Implementações de Computação Gráfica para a N1
 
+## Implementação 5 - Quadtree with Canvas 2D
+
+Este projeto implementa uma **Quadtree interativa** utilizando **HTML5 Canvas 2D** e **JavaScript puro**.
+A aplicação desenha um quadrado principal que pode ser **subdividido em quatro quadrantes** ao ser clicado.
+Cada subdivisão segue o mesmo princípio recursivo, permitindo visualizar de forma intuitiva a estrutura hierárquica da Quadtree.
+
+🛠️ **Tecnologias**
+
+* **HTML5 Canvas 2D** — para renderização gráfica dos quadrantes
+* **JavaScript (ES6+)** — para manipulação de eventos e lógica de subdivisão
+* **CSS** — para estilização simples da interface
+
+💡 **Conceito**
+
+A **Quadtree** é uma estrutura de dados hierárquica amplamente usada em computação gráfica, compressão de imagens e simulações físicas.
+Ela divide recursivamente uma área bidimensional em quatro partes menores, facilitando operações espaciais como detecção de colisão e indexação geográfica.
+
+---
+
 ## Implementação 7 - The Labyrinth of Zelda
 
 Um mini-jogo 2D de aventura e puzzle com labirintos gerados proceduralmente, desenvolvido em Python utilizando PyGame.
