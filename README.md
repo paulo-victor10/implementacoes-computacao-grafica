@@ -2,7 +2,7 @@
 
 ## Implementação 7 - The Labyrinth of Zelda
 
-Um mini-jogo 2D de aventura com labirintos gerados proceduralmente, desenvolvido em Python utilizando PyGame.
+Um mini-jogo 2D de aventura e puzzle com labirintos gerados proceduralmente, desenvolvido em Python utilizando PyGame.
 
 📜 Sobre o Jogo  
 Inspirado nos clássicos jogos de aventura e puzzle, "The Labyrinth of Zelda" coloca o jogador em um labirinto que muda a cada partida. O objetivo é explorar, encontrar todos os fragmentos da Triforce espalhados pelo mapa e escapar pelo portal que se abre após completar a coleta.  
