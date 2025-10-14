@@ -10,6 +10,33 @@ Este projeto apresenta experimentos visuais desenvolvidos em OpenGL com o auxíl
 - GLUT (Gerenciamento de janelas e eventos)
 - C/C++
 
+## Implementação 4 - Gráficos 2D com PyCairo
+
+Este projeto implementa a criação de gráficos vetoriais 2D utilizando a biblioteca **PyCairo**, os *bindings* em Python para a poderosa biblioteca gráfica Cairo. O foco é explorar a manipulação de formas básicas, cores e aplicação de transformações com o uso de *looping* e estados de contexto. A atividade foi dividida em duas partes principais:
+
+#### (a) Design da Carranca Geométrica e Transformações
+
+Criação de uma figura abstrata ("Carranca Geométrica") composta unicamente por formas primitivas (retângulo, círculos, triângulos e semicírculo). O principal desafio técnico foi a implementação de uma função de desenho de seta (`draw_arrow`) que aceita rotação.
+
+💡 **Conceitos Chave**
+
+* **Transformações:** Utilização de `cr.translate()` e `cr.rotate()` dentro da função `draw_arrow` para posicionar e orientar a seta (nariz) em qualquer ângulo.
+* **Isolamento de Estado:** Uso de `cr.save()` e `cr.restore()` para garantir que as transformações aplicadas à seta não afetem a posição e orientação dos demais elementos do desenho (corpo, olhos, boca).
+* **Caminhos Complexos:** Criação da boca utilizando `cr.arc()` e `cr.close_path()` para formar um semicírculo preenchido.
+
+Ps.: Foi escolhida a figura de uma Carranca como elemento criativo para a execução da atividade, preservando as formas sugeridas nas instruções, mas adicionando novas formas, cores, coordenadas e tamanhos.
+
+#### (b) Prática de Formas e Geração com *Looping*
+
+Implementação de padrões geométricos através de estruturas de repetição (`for`), demonstrando como a geometria, posição e cor podem ser variadas de forma algorítmica.
+
+🛠️ **Tecnologias**
+
+- **Python**
+- **PyCairo** (Bindings Python para a biblioteca Cairo)
+
+---
+
 ## Implementação 5 - Quadtree with Canvas 2D
 
 Este projeto implementa uma **Quadtree interativa** utilizando **HTML5 Canvas 2D** e **JavaScript puro**.
