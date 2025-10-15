@@ -4,11 +4,41 @@
 
 Este projeto apresenta experimentos visuais desenvolvidos em OpenGL com o auxílio da biblioteca GLUT, explorando conceitos fundamentais de computação gráfica, como gradientes de cor, formas geométricas básicas e transformações visuais.
 
-🛠️ **Tecnologias utilizadas**
+🛠️ **Tecnologias**
 
 - OpenGL (Core e Fixed Pipeline)
 - GLUT (Gerenciamento de janelas e eventos)
 - C/C++
+
+---
+
+## Implementação 3 — Interpolação de Cores #B
+
+Geração de uma grade de cores interpoladas a partir de **4 cores iniciais (A, B, C, D)**.
+O projeto permite comparar a interpolação nos espaços **RGB** e **HSL**, visualizando como as transições mudam entre os modelos de cor.
+
+🛠️ **Tecnologias**
+
+* 🖥️ **HTML** – estrutura da página
+* 🎨 **CSS** – layout e estilo
+* ⚙️ **JavaScript** – lógica de interpolação
+* 🌈 **[Chroma.js](https://gka.github.io/chroma.js/)** – manipulação e interpolação de cores (lerp)
+
+🚀 **Funcionalidades**
+
+* Seleção de 4 cores iniciais
+* Interpolação linear entre as cores (horizontal e vertical)
+* Alternância entre **RGB** e **HSL**
+* Exibição da grade final com o resultado
+
+▶️ **Como usar**
+
+1. Abra `index.html` no navegador
+2. Escolha as cores A, B, C e D
+3. Gere a interpolação
+4. Compare os resultados RGB × HSL
+
+---
 
 ## Implementação 4 - Gráficos 2D com PyCairo
 
